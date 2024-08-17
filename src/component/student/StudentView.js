@@ -12,9 +12,14 @@ const StudentsView = () => {
     const loadStudents = async () =>
     {
         const result = await axios.get(
-            'http://localhost:9192/students'
+            'http://localhost:9192/students',{
+            validateStatus: () => {
+                return true;
+            }}
         );
+        if(result.status === 302){
         setStudents(result.data)
+    }
     }
 
     return(
