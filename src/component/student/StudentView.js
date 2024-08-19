@@ -21,6 +21,13 @@ const StudentsView = () => {
         }
     };
 
+    const handleDelete = async (id) => {
+        await axios.delete(
+        `http://localhost:9192/students/delete/${id}`
+        );
+        loadStudents()
+    }
+
     return (
         <section>
             <table className="table table-bordered table-hover shadow">
@@ -57,7 +64,8 @@ const StudentsView = () => {
                                 </Link>
                             </td>
                             <td className="mx-2">
-                                <button className="btn btn-danger"><FaTrashAlt/></button>
+                                <button className="btn btn-danger"
+                                onClick={() => handleDelete(student.id)}><FaTrashAlt/></button>
                             </td>
                         </tr>
                     ))}
