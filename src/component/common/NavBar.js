@@ -22,16 +22,16 @@ const NavBar = () => {
 					className="collapse navbar-collapse"
 					id="navbarNav">
 					<ul className="navbar-nav">
-                        <li className="nav-link active">
+                        <li className="nav-item">
                           <Link  
-                            aria-current="page" 
+						  	className="nav-link"
                             to={"/view-students"}>
                             View All students
                           </Link>
 						</li>
-						<li className="nav-link">
+						<li className="nav-item">
                           <Link  
-                            aria-current="page" 
+                            className="nav-link"
                             to={"/add-students"}>
                             Add New Students
                           </Link>
