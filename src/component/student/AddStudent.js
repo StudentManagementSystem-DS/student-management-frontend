@@ -79,6 +79,24 @@ const AddStudent = () => {
             onChange={(e) => handleInputChange(e)}/>
         </div>
 
+        <div className='row mb-5'>
+          <div className='col-sm-2'>
+            <button
+            type='submit'
+            className='btn btn-outline-success btn-lg'>
+            Save
+            </button>
+          </div>
+
+          <div className='col-sm-2'>
+            <button
+            type='submit'
+            className='btn btn-outline-warning btn-lg'>
+            Cancel
+            </button>
+          </div>
+        </div>
+
       </form>
     </div>
   );
