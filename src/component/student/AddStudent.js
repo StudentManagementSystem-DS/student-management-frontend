@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,10 +16,16 @@ const AddStudent = () => {
         setStudent({ ...student, [e.target.name] : e.target.value })
     }
 
+    const saveStudent = async (e) => {
+      e.preventDefault();
+      await axios.post(
+        'http://localhost:9192/students', student)
+    }
+
 
   return (
     <div className='col-sm-8 py-2 px-5'>
-      <form>
+      <form onSubmit={(e) => saveStudent(e) }>
         <div className='input group mb-5'>
             <label
             className='input-group-text'
@@ -68,7 +75,7 @@ const AddStudent = () => {
             <label
             className='input-group-text'
             htmlFor='department'>
-            Last Name
+            Department
             </label>
             <input 
             className='form-control col-sm-6'
