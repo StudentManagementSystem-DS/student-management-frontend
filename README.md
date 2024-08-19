@@ -8,7 +8,7 @@ The Student Management project is a web application that allows users to manage 
 
 ### Entities:
 - **Students**: Each student has a unique ID, name, email, and other relevant details.
-- **Users**: Users can add, view, edit, and delete student records.
+- **User**: User can add, view, edit, and delete student records.
 
 ### Features:
 - **Add Students**: Users can add new students to the system.
